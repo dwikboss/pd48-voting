@@ -4,7 +4,7 @@
         <h4>Vote for your 4 favorite trainees to make their debut!</h4>
 	</div>
 	<div class="contestants">
-		<TraineeTile v-for="trainee in trainees" :key="trainee.id" :traineeData="trainee" @toggle-trainee="receiveToggle"/>
+		<TraineeTile v-for="trainee in trainees" :key="trainee.id" :trainee="trainee" @toggle-trainee="receiveToggle"/>
 	</div>
 	<SelectedHolder :selectedTrainees="selectedTrainees"/>
 </template>
@@ -37,7 +37,7 @@ export default defineComponent({
 				console.error('Error fetching trainees:', error);
 			}
 		},
-		receiveToggle(this: { trainees: Trainee[], selectedTrainees: Trainee[] }, traineeId: number) {
+		receiveToggle(traineeId: number) {
 			const selectedTrainee = this.trainees.find(trainee => trainee.id === traineeId);
 
 			if (!selectedTrainee) {

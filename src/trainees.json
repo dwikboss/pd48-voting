@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "name": "An Yujin",
+        "photo": "icons/yujin.png",
+        "full_photo": "icons/yujin_full.png",
+        "agency": "Starship Entertainment",
+        "rank": 5,
+        "votes": 0
+    },
+    {
+        "id": 2,
+        "name": "Kim Chaewon",
+        "photo": "icons/chaewon.png",
+        "full_photo": "icons/chaewon_full.png",
+        "agency": "Source Music",
+        "rank": 8,
+        "votes": 0
+    },
+    {
+        "id": 3,
+        "name": "Jang Wonyoung",
+        "photo": "icons/wonyoung.png",
+        "full_photo": "icons/wonyoung_full.png",
+        "agency": "Starship Entertainment",
+        "rank": 1,
+        "votes": 0
+    },
+    {
+        "id": 4,
+        "name": "Choi Yena",
+        "photo": "icons/yena.png",
+        "full_photo": "icons/yena_full.png",
+        "agency": "YUE HUA",
+        "rank": 11,
+        "votes": 0
+    },
+    {
+        "id": 5,
+        "name": "Jo Yuri",
+        "photo": "icons/yuri.png",
+        "full_photo": "icons/yuri_full.png",
+        "agency": "Stone Music",
+        "rank": 4,
+        "votes": 0
+    },
+    {
+        "id": 6,
+        "name": "Miyawaki Sakura",
+        "photo": "icons/sakura.png",
+        "full_photo": "icons/sakura_full.png",
+        "agency": "HKT48",
+        "rank": 7,
+        "votes": 0
+    },
+    {
+        "id": 7,
+        "name": "Jang Gyuri",
+        "photo": "icons/gyuri.png",
+        "full_photo": "icons/gyuri_full.png",
+        "agency": "Stone Music",
+        "rank": 3,
+        "votes": 0
+    },
+    {
+        "id": 8,
+        "name": "Huh Yunjin",
+        "photo": "icons/yunjin.png",
+        "full_photo": "icons/yunjin_full.png",
+        "agency": "PLEDIS Entertainment",
+        "rank": 2,
+        "votes": 0
+    },
+    {
+        "id": 9,
+        "name": "Kim Minju",
+        "photo": "icons/minju.png",
+        "full_photo": "icons/minju_full.png",
+        "agency": "Urban Works",
+        "rank": 6,
+        "votes": 0
+    }
+]

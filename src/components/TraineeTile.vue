@@ -1,11 +1,11 @@
 <template>
-    <div @click="selectTrainee" class="trainee-tile" v-bind:class="isSelected ? 'selected' : 'deselected'">
+    <div @click="selectTrainee" class="trainee-tile" :class="isSelected ? 'selected' : 'deselected'">
         <div class="tile-left">
             <!-- <span class="trainee-rank">{{ traineeData.rank }}</span> -->
-            <h3 class="trainee-name">{{ traineeData.name }}</h3>
-            <h3 class="trainee-agency">{{ traineeData.agency }}</h3>
+            <h3 class="trainee-name">{{ trainee.name }}</h3>
+            <h3 class="trainee-agency">{{ trainee.agency }}</h3>
         </div>
-        <div class="tile-right" :style="{ 'background-image': 'url(' + require(`@/assets/${traineeData.full_photo}`) + ')' }">
+        <div class="tile-right" :style="{ 'background-image': 'url(' + require(`@/assets/${trainee.full_photo}`) + ')' }">
         </div>
     </div>
 </template>
@@ -23,12 +23,12 @@ export default defineComponent({
     },
     methods: {
         selectTrainee() {
-            this.$emit('toggle-trainee', this.traineeData.id);
+            this.$emit('toggle-trainee', this.trainee.id);
             this.isSelected = !this.isSelected;
         }
     },
     props: {
-        traineeData: {
+        trainee: {
             type: Object as PropType<Trainee>,
             required: true
         }
