@@ -7,11 +7,9 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'CertificateView',
-
 })
 </script>
 
 <style lang="scss" scoped>
 
 </style>
-  

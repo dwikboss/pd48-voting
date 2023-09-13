@@ -1,6 +1,6 @@
 <template>
     <div class="modal-container">
-        <h1>CONFIRM</h1>
+        <h1>Your vote has been registered!</h1>
     </div>
 </template>
 
@@ -11,9 +11,10 @@ import { Trainee } from '@/interfaces/Trainee';
 export default defineComponent({
     name: 'VotingCertificate',
     props: {
+        
     },
     computed: {
-
+        
     }
 })
 </script>
