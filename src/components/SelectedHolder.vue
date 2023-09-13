@@ -1,6 +1,6 @@
 <template>
     <div class="selected-container">
-        <h5>Your 4 dreamgirl picks</h5>
+        <h5>Your 3 chosen dreamgirls</h5>
         <div class="contestant-wrapper">
             <div class="selected-box" v-for="(trainee, index) in formattedTrainees" :key="index">
             <img v-if="trainee" :src="require(`@/assets/${trainee.photo}`)" :alt="trainee.name">
@@ -22,7 +22,7 @@ export default defineComponent({
     },
     computed: {
         formattedTrainees(): (Trainee | null)[] {
-            const placeholdersCount = 4;
+            const placeholdersCount = 3;
             const trainees = this.selectedTrainees ? this.selectedTrainees.slice(0, placeholdersCount) : [];
 
             while (trainees.length < placeholdersCount) {
@@ -63,7 +63,7 @@ export default defineComponent({
 
     .contestant-wrapper {
         display: flex;
-        gap: 6px;
+        gap: 12px;
         justify-content: center;
     }
 

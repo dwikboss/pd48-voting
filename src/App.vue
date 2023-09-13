@@ -1,8 +1,9 @@
 <template>
 	<div class="header">
 		<h1>GLOBAL VOTE</h1>
-        <h4>Vote for your 4 favorite trainees to make their debut!</h4>
+        <h4>Vote for your 3 favorite trainees to make their debut!</h4>
 	</div>
+	<router-view></router-view>
 	<div class="contestants">
 		<TraineeTile v-for="trainee in trainees" :key="trainee.id" :trainee="trainee" @toggle-trainee="receiveToggle"/>
 	</div>

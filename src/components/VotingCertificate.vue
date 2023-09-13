@@ -9,7 +9,7 @@ import { defineComponent } from 'vue';
 import { Trainee } from '@/interfaces/Trainee';
 
 export default defineComponent({
-    name: 'ModalConfirm',
+    name: 'VotingCertificate',
     props: {
     },
     computed: {
