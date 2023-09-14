@@ -11,8 +11,8 @@
 </template>
 
 <script lang="ts">
-import { useSelectedTraineesStore } from '@/store/chosen';
 import { PropType, defineComponent } from 'vue';
+import { useSelectedTraineesStore } from '@/store/chosen';
 import { Trainee } from '@/interfaces/Trainee';
 
 export default defineComponent({

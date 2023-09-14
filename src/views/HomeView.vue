@@ -91,7 +91,7 @@ export default defineComponent({
 		gap: 10px;
 		padding: 10px 20px 10px 20px;
 		overflow: scroll;
-		height: 60vh;
+		height: 0;
 		flex-grow: 1;
 	}
 }
