@@ -24,9 +24,7 @@ export default defineComponent({
     },
     methods: {
         selectTrainee() {
-            this.$emit('toggle-trainee', this.trainee.id);
             this.isSelected = !this.isSelected;
-
             const traineeStore = useSelectedTraineesStore();
 			const index = traineeStore.getSelectedTrainees().findIndex(trainee => trainee.id === this.trainee.id);
 
@@ -62,9 +60,9 @@ export default defineComponent({
 
 .trainee-tile {
     background:
-      repeating-conic-gradient(from 30deg,#0000 0 120deg,rgba(255,255,255,0.05) 0 180deg) 
-       60px 34.62px,
-      repeating-conic-gradient(from 30deg,rgba(255, 66, 164, 0.05) 0 60deg,rgba(255,168,213,0.05) 0 120deg,rgba(255,255,255,0.05) 0 180deg);
+        repeating-conic-gradient(from 30deg,#0000 0 120deg,rgba(255,255,255,0.05) 0 180deg) 
+        60px 34.62px,
+        repeating-conic-gradient(from 30deg,rgba(255, 66, 164, 0.05) 0 60deg,rgba(255,168,213,0.05) 0 120deg,rgba(255,255,255,0.05) 0 180deg);
     background-size: 120px 69px;
     display: flex;
     justify-content: space-between;

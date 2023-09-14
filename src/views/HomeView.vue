@@ -83,7 +83,7 @@ export default defineComponent({
 	.contestants {
 		display: flex;
 		flex-direction: column;
-		gap: 15px;
+		gap: 10px;
 		padding: 10px 20px 10px 20px;
 		overflow: scroll;
 		height: 60vh;

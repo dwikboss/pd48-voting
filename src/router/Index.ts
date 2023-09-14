@@ -10,7 +10,7 @@ export default createRouter({
 			component: HomeView
 		},
 		{
-			path: '/confirm-votes',
+			path: '/confirm',
 			component: CertificateView
 		}
 	]

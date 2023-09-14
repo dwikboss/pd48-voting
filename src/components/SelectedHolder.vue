@@ -7,7 +7,9 @@
             <span v-else></span>
         </div>
         </div>
-        <button class="vote-btn">LOCK IN</button>
+        <router-link to="/confirm" custom v-slot="{ navigate }">
+            <button :disabled="!isActive" :class="{ 'vote-btn': true, 'disabled': !isActive }" @click="navigate" role="link">VOTE</button>
+        </router-link>
     </div>
 </template>
 
@@ -19,7 +21,7 @@ import { Trainee } from '@/interfaces/Trainee';
 export default defineComponent({
     name: 'SelectedHolder',
     computed: {
-        formattedTrainees(): (Trainee | null)[] {
+        formattedTrainees(): (Trainee)[] {
             const placeholderTrainee: Trainee = {
                 id: -1,
                 name: '',
@@ -39,6 +41,9 @@ export default defineComponent({
             }
             
             return trainees;
+        },
+        isActive(): boolean {
+            return this.formattedTrainees.filter(trainee => trainee && trainee.id !== -1).length === 3;
         }
     }
 })
@@ -58,6 +63,11 @@ export default defineComponent({
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    .disabled {
+        background-color: #6d6d6d63 !important;
+    }
+
 
     h4 {
         color: #ffffff;
