@@ -1,12 +1,14 @@
 <template>
-	<div class="header">
-		<h1>GLOBAL VOTE</h1>
-        <h4>Vote for your 3 favorite trainees to make their debut!</h4>
+	<div id="home-screen">
+		<div class="header">
+			<h1>GLOBAL VOTE</h1>
+			<h4>Vote for your 3 favorite trainees to make their debut!</h4>
+		</div>
+		<div class="contestants">
+			<TraineeTile v-for="trainee in trainees" :key="trainee.id" :trainee="trainee"/>
+		</div>
+		<SelectedHolder/>
 	</div>
-	<div class="contestants">
-		<TraineeTile v-for="trainee in trainees" :key="trainee.id" :trainee="trainee"/>
-	</div>
-	<SelectedHolder/>
 </template>
 
 <script lang="ts">
@@ -48,6 +50,9 @@ export default defineComponent({
 	font-family: 'Poppins';
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+#home-screen {
 	text-align: center;
 	display: flex;
 	flex-direction: column;

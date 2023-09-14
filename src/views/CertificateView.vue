@@ -1,6 +1,10 @@
 <template>
-    <h1>Thank you for voting!</h1>
-    <VotingCertificate/>
+    <div class="certificate-screen">
+        <img src="@/assets/img/produce48-logo.png">
+        <div class="certificate-container">
+            <VotingCertificate/>
+        </div>
+    </div>
 </template>
 
 <script lang="ts">
@@ -14,5 +18,21 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.certificate-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    img {
+        margin: 25px;
+    }
 
+    .certificate-container {
+        padding: 0 10px 0 10px;
+    }
+}
+
+img {
+    width: 50%;
+}
 </style>
