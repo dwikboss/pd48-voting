@@ -35,6 +35,7 @@ export default defineComponent({
 
     .certificate-container {
         padding: 0 10px 0 10px;
+        margin-bottom: -2px;
     }
 }
 
