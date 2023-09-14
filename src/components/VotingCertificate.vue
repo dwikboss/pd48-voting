@@ -96,7 +96,7 @@ export default defineComponent({
         margin-bottom: 20px;
         font-size: 2.5em;
         color: white;
-        text-shadow: #fa40a0 0px 0 35px;
+        text-shadow: #fa40a08c 0px 0 35px;
         line-height: 1.25em;
     }
 
