@@ -1,8 +1,8 @@
 <template>
 	<div id="home-screen">
 		<div class="header">
-			<h1>GLOBAL VOTE</h1>
-			<h4>Vote for your 3 favorite trainees to make their debut!</h4>
+			<h1>GLOBAL VOTING</h1>
+			<!-- <h4>Vote for your 3 favorite trainees to make their debut!</h4> -->
 		</div>
 		<div class="contestants">
 			<TraineeTile v-for="trainee in trainees" :key="trainee.id" :trainee="trainee"/>
@@ -60,7 +60,7 @@ export default defineComponent({
 	justify-content: space-between;
 
 	.header {
-		height: 15vh;
+		height: 10vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -92,6 +92,7 @@ export default defineComponent({
 		padding: 10px 20px 10px 20px;
 		overflow: scroll;
 		height: 60vh;
+		flex-grow: 1;
 	}
 }
 </style>
