@@ -3,7 +3,7 @@
         <h5>Your 3 chosen dreamgirls</h5>
         <div class="contestant-wrapper">
             <div class="selected-box" v-for="(trainee, index) in formattedTrainees" :key="index">
-            <img v-if="trainee" :src="require(`@/assets/${trainee.photo}`)" :alt="trainee.name">
+            <img v-if="trainee && trainee.photo" :src="require(`@/assets/${trainee.photo}`)" :alt="trainee.name">
             <span v-else></span>
         </div>
         </div>
@@ -12,27 +12,38 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
+import { defineComponent } from 'vue';
+import { useSelectedTraineesStore } from '@/store/chosen';
 import { Trainee } from '@/interfaces/Trainee';
 
 export default defineComponent({
     name: 'SelectedHolder',
-    props: {
-        selectedTrainees: Array as PropType<Array<Trainee | null>>,
-    },
     computed: {
         formattedTrainees(): (Trainee | null)[] {
+            const placeholderTrainee: Trainee = {
+                id: -1,
+                name: '',
+                photo: '',
+                full_photo: '',
+                agency: '',
+                rank: -1,
+                votes: -1,
+            };
+ 
+            const traineeStore = useSelectedTraineesStore();
             const placeholdersCount = 3;
-            const trainees = this.selectedTrainees ? this.selectedTrainees.slice(0, placeholdersCount) : [];
+            const trainees = traineeStore.getSelectedTrainees() ? traineeStore.getSelectedTrainees().slice(0, placeholdersCount) : [];
 
             while (trainees.length < placeholdersCount) {
-                trainees.push(null);
+                trainees.push(placeholderTrainee);
             }
+            
             return trainees;
         }
     }
 })
 </script>
+
 
 <style lang="scss" scoped>
 .selected-container {

@@ -4,24 +4,23 @@
         <h4>Vote for your 3 favorite trainees to make their debut!</h4>
 	</div>
 	<div class="contestants">
-		<TraineeTile v-for="trainee in trainees" :key="trainee.id" :trainee="trainee" @toggle-trainee="receiveToggle"/>
+		<TraineeTile v-for="trainee in trainees" :key="trainee.id" :trainee="trainee"/>
 	</div>
-	<SelectedHolder :selectedTrainees="selectedTrainees"/>
+	<SelectedHolder/>
 </template>
 
 <script lang="ts">
-import TraineeTile from '../components/TraineeTile.vue'
-import SelectedHolder from '../components/SelectedHolder.vue'
+import TraineeTile from '@/components/TraineeTile.vue'
+import SelectedHolder from '@/components/SelectedHolder.vue'
 import { defineComponent } from 'vue';
-import { Trainee } from '../interfaces/Trainee';
-import { getTrainees } from '../trainees.api';
+import { Trainee } from '@/interfaces/Trainee';
+import { getTrainees } from '@/trainees.api';
 
 export default defineComponent({
 	name: 'HomeView',
 	data() {
 		return {
 			trainees: [] as Trainee[],
-			selectedTrainees: [] as Trainee[],
 		};
 	},
 	created() {
@@ -32,28 +31,9 @@ export default defineComponent({
 			try {
 				const trainees = await getTrainees();
 				this.trainees = trainees;
-				console.log("trainees: " + this.trainees);
 			} catch (error) {
 				console.error('Error fetching trainees:', error);
 			}
-		},
-		receiveToggle(traineeId: number) {
-			const selectedTrainee = this.trainees.find(trainee => trainee.id === traineeId);
-
-			if (!selectedTrainee) {
-				console.error(`Trainee with ID ${traineeId} not found.`);
-				return;
-			}
-
-			const index = this.selectedTrainees.findIndex(trainee => trainee.id === traineeId);
-
-			if (index !== -1) {
-				this.selectedTrainees.splice(index, 1);
-			} else {
-				this.selectedTrainees.push(selectedTrainee);
-			}
-
-			console.log(this.selectedTrainees);
 		},
 	},
 	components: {

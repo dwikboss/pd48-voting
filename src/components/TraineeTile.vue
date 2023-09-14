@@ -11,6 +11,7 @@
 </template>
 
 <script lang="ts">
+import { useSelectedTraineesStore } from '@/store/chosen';
 import { PropType, defineComponent } from 'vue';
 import { Trainee } from '@/interfaces/Trainee';
 
@@ -25,6 +26,15 @@ export default defineComponent({
         selectTrainee() {
             this.$emit('toggle-trainee', this.trainee.id);
             this.isSelected = !this.isSelected;
+
+            const traineeStore = useSelectedTraineesStore();
+			const index = traineeStore.getSelectedTrainees().findIndex(trainee => trainee.id === this.trainee.id);
+
+			if (index !== -1) {
+				traineeStore.removeSelectedTrainee(index);
+			} else {
+				traineeStore.addSelectedTrainee(this.trainee);
+			}
         }
     },
     props: {
