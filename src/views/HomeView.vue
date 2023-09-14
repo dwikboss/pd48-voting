@@ -60,19 +60,19 @@ export default defineComponent({
 	justify-content: space-between;
 
 	.header {
-		height: 10vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 		background: rgb(255,134,195);
 		background: linear-gradient(180deg, rgba(255,134,195,1) 0%, rgba(252,169,212,1) 100%);
-		border-bottom-left-radius: 35px;
-		border-bottom-right-radius: 35px;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		padding: 20px;
 
 		h1 {
 			color: white;
-			font-size: 1.8em;
+			font-size: 1.2em;
 			margin: 0;
 		}
 
