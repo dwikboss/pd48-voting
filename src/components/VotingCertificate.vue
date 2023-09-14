@@ -69,7 +69,8 @@ export default defineComponent({
     repeating-conic-gradient(from 30deg,#0000 0 120deg,rgba(238, 91, 201, 0.11) 0 180deg) 
     60px 34.62px,
     repeating-conic-gradient(from 30deg,rgba(255, 66, 164, 0.2) 0 60deg,rgba(255,168,213,0.2) 0 120deg,rgba(238, 92, 206, 0.2) 0 0deg);
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,10 +93,11 @@ export default defineComponent({
     h2 {
         text-align: center;
         margin-top: 25px;
-        margin-bottom: 10px;
-        font-size: 1.8em;
+        margin-bottom: 20px;
+        font-size: 2.5em;
         color: white;
         text-shadow: #fa40a0 0px 0 35px;
+        line-height: 1.25em;
     }
 
     h3 {
@@ -123,7 +125,8 @@ export default defineComponent({
         align-items: center;
         padding: 15px;
         gap: 10px;
-        margin-top: 20px;
+        margin-top: 35px;
+        margin-bottom: 35px;
 
         .voted-trainee {
             border-radius: 10px;

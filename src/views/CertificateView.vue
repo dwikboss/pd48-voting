@@ -22,9 +22,12 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
+    justify-content: space-between;
     
     img {
         margin: 25px;
+        width: 35%;
     }
 
     .certificate-container {
