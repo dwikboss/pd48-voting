@@ -23,13 +23,12 @@ export default defineComponent({
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    justify-content: space-between;
+    justify-content: space-around;
     background-image: radial-gradient(#fa40a036 2px, transparent 2px);
     background-size: 45px 45px;
     background-color: #ffffff;
     
     img {
-        margin: 25px;
         width: 35%;
     }
 
