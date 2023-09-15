@@ -2,14 +2,11 @@
     <div class="header">
         <div class="header-menu">
 			<ul class="menu-list">
-				<router-link to="/certificate" active-class="active">
-					<li>CERTIFICATE</li>
-				</router-link>
 				<router-link to="/vote" active-class="active">
 					<li>VOTE</li>
 				</router-link>
-				<router-link to="/" active-class="active">
-					<li>INFO</li>
+				<router-link to="/certificate" active-class="active">
+					<li>CERTIFICATE</li>
 				</router-link>
 			</ul>
         </div>
