@@ -20,7 +20,7 @@ export default createRouter({
 			],
 		},
 		{
-			path: '/confirm',
+			path: '/certificate',
 			component: CertificateView
 		}
 	]

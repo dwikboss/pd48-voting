@@ -11,7 +11,7 @@
             </div>
             <img :class="{ 'diamond': true, 'enter-right': !isActive }" class="diamond" src="@/assets/img/diamonds.png" alt="">
         </div>
-        <router-link to="/confirm" custom v-slot="{ navigate }">
+        <router-link to="/certificate" custom v-slot="{ navigate }">
             <button :disabled="!isActive" :class="{ 'vote-btn': true, 'disabled': !isActive }" @click="navigate" role="link">VOTE</button>
         </router-link>
     </div>
