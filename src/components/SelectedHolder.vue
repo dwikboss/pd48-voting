@@ -77,13 +77,15 @@ export default defineComponent({
         .diamond {
             height: 30px;
             transform: translateX(0);
-            transition: all 200ms;
+            transition: all 300ms;
         }
         .enter-right {
-            transform: translateX(100px);
+            transform: translateX(80px);
+            height: 0px;
         }
         .enter-left {
-            transform: translateX(-100px);
+            transform: translateX(-80px);
+            height: 0px;
         }
     }
 
@@ -117,10 +119,15 @@ export default defineComponent({
         height: 65px;
         padding: 3px;
         background-color: #da368b31;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         img {
             max-width: 100%;
             max-height: 100%;
+            transition: all 350ms;
+            animation: grow-image 100ms cubic-bezier(0, 1.25, 1, 1);
         }
     }
 
@@ -133,6 +140,15 @@ export default defineComponent({
         width: 6em;
         padding: 5px 0 5px 0;
         font-family: 'Poppins';
+    }
+}
+
+@keyframes grow-image {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
     }
 }
 </style>

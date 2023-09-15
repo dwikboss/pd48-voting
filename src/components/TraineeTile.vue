@@ -88,6 +88,7 @@ export default defineComponent({
     justify-content: space-between;
     border-radius: 12px;
     position: relative;
+    
 
     .trainee-rank {
         position: absolute;
