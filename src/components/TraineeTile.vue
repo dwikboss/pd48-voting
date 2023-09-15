@@ -17,6 +17,16 @@ import { Trainee } from '@/interfaces/Trainee';
 
 export default defineComponent({
     name: 'TraineeTile',
+    mounted() {
+        console.log('Component mounted');
+        const traineeStore = useSelectedTraineesStore();
+        const isSelected = traineeStore.getSelectedTrainees().some((trainee) => trainee.id === this.trainee.id);
+        console.log('isSelected:', isSelected);
+
+        if (isSelected) {
+            this.isSelected = true ;
+        }
+    },
     data () {
         return {
             isSelected: false
@@ -24,15 +34,25 @@ export default defineComponent({
     },
     methods: {
         selectTrainee() {
-            this.isSelected = !this.isSelected;
             const traineeStore = useSelectedTraineesStore();
-			const index = traineeStore.getSelectedTrainees().findIndex(trainee => trainee.id === this.trainee.id);
 
-			if (index !== -1) {
-				traineeStore.removeSelectedTrainee(index);
-			} else {
-				traineeStore.addSelectedTrainee(this.trainee);
-			}
+            if (traineeStore.getSelectedTrainees().length === 3) {
+                const index = traineeStore.getSelectedTrainees().findIndex(trainee => trainee.id === this.trainee.id);
+                if (index !== -1) {
+                    traineeStore.removeSelectedTrainee(index);
+                    this.isSelected = false;
+                }
+            } else {
+                const index = traineeStore.getSelectedTrainees().findIndex(trainee => trainee.id === this.trainee.id);
+
+                if (index !== -1) {
+                    traineeStore.removeSelectedTrainee(index);
+                    this.isSelected = false;
+                } else {
+                    traineeStore.addSelectedTrainee(this.trainee);
+                    this.isSelected = true;
+                }
+            }
         }
     },
     props: {

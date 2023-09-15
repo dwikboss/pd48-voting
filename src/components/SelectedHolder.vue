@@ -90,8 +90,8 @@ export default defineComponent({
 
     .selected-box {
         border-radius: 50%;
-        width: 75px;
-        height: 75px;
+        width: 65px;
+        height: 65px;
         padding: 3px;
         background-color: #da368b31;
 
