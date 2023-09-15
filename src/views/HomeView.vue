@@ -1,9 +1,5 @@
 <template>
 	<div id="home-screen">
-		<div class="header">
-			<h1>GLOBAL VOTING</h1>
-			<!-- <h4>Vote for your 3 favorite trainees to make their debut!</h4> -->
-		</div>
 		<div class="contestants">
 			<TraineeTile v-for="trainee in trainees" :key="trainee.id" :trainee="trainee"/>
 		</div>
@@ -46,44 +42,12 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-#app {
-	font-family: 'Poppins';
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
 #home-screen {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
+	min-height: 90vh;
 	justify-content: space-between;
-
-	.header {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		background: rgb(255,134,195);
-		background: linear-gradient(180deg, rgba(255,134,195,1) 0%, rgba(252,169,212,1) 100%);
-		border-bottom-left-radius: 20px;
-		border-bottom-right-radius: 20px;
-		padding: 20px;
-
-		h1 {
-			color: white;
-			font-size: 1.2em;
-			margin: 0;
-		}
-
-		h4 {
-			margin: 0;
-			font-weight: 500;
-			width: 60%;
-			font-size: 0.8em;
-			color: white;
-		}
-	}
 
 	.contestants {
 		display: flex;
