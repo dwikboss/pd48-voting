@@ -1,6 +1,6 @@
 <template>
     <div class="certificate">
-        <h2>FINAL ROUND VOTE</h2>
+        <h2>VOTING CERTIFICATE</h2>
         <h3 class="period-text">Voting period ends</h3>
         <h3 class="due-date">november 20 2023</h3>
         <div class="voted-trainees">
@@ -87,7 +87,7 @@ export default defineComponent({
 
     .due-date {
         font-weight: 700;
-        color: #fa40a0;
+        color: rgba(214, 135, 194, 0.76);
         font-size: 1.4em;
     }
 
@@ -96,8 +96,8 @@ export default defineComponent({
         margin-top: 25px;
         margin-bottom: 20px;
         font-size: 2.5em;
-        color: white;
-        text-shadow: #fa40a08c 0px 0 35px;
+        color: rgba(214, 135, 194, 0.452);
+        // text-shadow: #fa40a08c 0px 0 35px;
         line-height: 1.25em;
     }
 

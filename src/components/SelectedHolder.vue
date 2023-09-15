@@ -1,11 +1,15 @@
 <template>
     <div class="selected-container">
         <h5>Your 3 chosen dreamgirls</h5>
-        <div class="contestant-wrapper">
-            <div class="selected-box" v-for="(trainee, index) in formattedTrainees" :key="index">
-            <img v-if="trainee && trainee.photo" :src="require(`@/assets/${trainee.photo}`)" :alt="trainee.name">
-            <span v-else></span>
-        </div>
+        <div class="container-row">
+            <img :class="{ 'diamond': true, 'enter-left': !isActive }" class="diamond" src="@/assets/img/diamonds.png" alt="">
+            <div class="contestant-wrapper">
+                <div class="selected-box" v-for="(trainee, index) in formattedTrainees" :key="index">
+                    <img v-if="trainee && trainee.photo" :src="require(`@/assets/${trainee.photo}`)" :alt="trainee.name">
+                    <span v-else></span>
+                </div>
+            </div>
+            <img :class="{ 'diamond': true, 'enter-right': !isActive }" class="diamond" src="@/assets/img/diamonds.png" alt="">
         </div>
         <router-link to="/confirm" custom v-slot="{ navigate }">
             <button :disabled="!isActive" :class="{ 'vote-btn': true, 'disabled': !isActive }" @click="navigate" role="link">VOTE</button>
@@ -63,6 +67,25 @@ export default defineComponent({
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
+
+    .container-row {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        .diamond {
+            height: 30px;
+            transform: translateX(0);
+            transition: all 200ms;
+        }
+        .enter-right {
+            transform: translateX(100px);
+        }
+        .enter-left {
+            transform: translateX(-100px);
+        }
+    }
 
     .disabled {
         background-color: #6d6d6d63 !important;
