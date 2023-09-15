@@ -10,6 +10,10 @@ export default createRouter({
 			component: HomeView
 		},
 		{
+			path: '/vote',
+			component: HomeView
+		},
+		{
 			path: '/confirm',
 			component: CertificateView
 		}

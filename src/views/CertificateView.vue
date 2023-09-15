@@ -1,6 +1,6 @@
 <template>
     <div class="certificate-screen">
-        <img src="@/assets/img/produce48-logo.png">
+        <!-- <img src="@/assets/img/produce48-logo.png"> -->
         <div class="certificate-container">
             <VotingCertificate/>
         </div>
@@ -30,6 +30,7 @@ export default defineComponent({
     background-color: #ffffff;
     
     img {
+        margin: 50px;
         width: 35%;
     }
 
