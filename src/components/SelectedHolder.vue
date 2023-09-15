@@ -59,7 +59,7 @@ export default defineComponent({
     background: rgb(255,134,195);
     background: linear-gradient(0deg, rgba(255,134,195,1) 0%, rgba(254,198,227,1) 100%);
     width: 100%;
-    height: 22vh;
+    height: 23vh;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
     display: flex;
