@@ -38,6 +38,7 @@ export default defineComponent({
 
             if (traineeStore.getSelectedTrainees().length === 3) {
                 const index = traineeStore.getSelectedTrainees().findIndex(trainee => trainee.id === this.trainee.id);
+                
                 if (index !== -1) {
                     traineeStore.removeSelectedTrainee(index);
                     this.isSelected = false;

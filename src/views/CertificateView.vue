@@ -21,9 +21,10 @@ export default defineComponent({
 .certificate-screen {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
-    height: 100vh;
-    justify-content: space-around;
+    gap: 50px;
+    flex-grow: 1;
     background-image: radial-gradient(#fa40a036 2px, transparent 2px);
     background-size: 45px 45px;
     background-color: #ffffff;
