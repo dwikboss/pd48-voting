@@ -75,16 +75,16 @@ export default defineComponent({
         align-items: center;
 
         .diamond {
-            height: 30px;
+            height: 25px;
             transform: translateX(0);
             transition: all 300ms;
         }
         .enter-right {
-            transform: translateX(80px);
+            transform: translateX(75px);
             height: 0px;
         }
         .enter-left {
-            transform: translateX(-80px);
+            transform: translateX(-75px);
             height: 0px;
         }
     }

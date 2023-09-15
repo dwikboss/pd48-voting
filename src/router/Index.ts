@@ -11,7 +11,13 @@ export default createRouter({
 		},
 		{
 			path: '/vote',
-			component: HomeView
+			component: HomeView,
+			children: [
+				{
+					path: 'confirm',
+					component: CertificateView,
+				},
+			],
 		},
 		{
 			path: '/confirm',

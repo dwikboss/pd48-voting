@@ -18,6 +18,7 @@
         <hr>
         <h4>Your vote is now complete</h4>
         <h4>{{ voteDate }}</h4>
+        <h4 class="notice">This certificate validates your vote for the final voting round of PRODUCE 48. Votes will be verified by third party organizations.</h4>
     </div>
 </template>
 
@@ -81,7 +82,7 @@ export default defineComponent({
     .period-text {
         font-weight: 300;
         font-size: 1.1em;
-        color: rgba(0, 0, 0, 0.473);
+        color: #00000033;
     }
 
     .due-date {
@@ -111,6 +112,16 @@ export default defineComponent({
         margin: 0;
         font-weight: 500;
         color: #00000044;
+        text-align: center;
+    }
+
+    h4.notice {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: 400;
+        color: #00000033;
+        font-size: 0.8em;
+        width: 80%;
     }
     
     hr {

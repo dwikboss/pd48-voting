@@ -36,11 +36,20 @@ export default defineComponent({
 
     .certificate-container {
         padding: 0 10px 0 10px;
-        margin-bottom: -2px;
+        animation: showCertificate 800ms cubic-bezier(0, 0.29, 0, 0.98);
     }
 }
 
 img {
     width: 50%;
+}
+
+@keyframes showCertificate {
+    0% {
+        transform: translateY(50vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 </style>

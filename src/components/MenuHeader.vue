@@ -2,9 +2,15 @@
     <div class="header">
         <div class="header-menu">
 			<ul class="menu-list">
-				<li>VOTE</li>
-				<li>LEADERBOARD</li>
-				<li>INFO</li>
+				<router-link to="/vote" active-class="active">
+					<li>VOTE</li>
+				</router-link>
+				<router-link to="/" active-class="active">
+					<li>LEADERBOARD</li>
+				</router-link>
+				<router-link to="/" active-class="active">
+					<li>INFO</li>
+				</router-link>
 			</ul>
         </div>
     </div>
@@ -46,7 +52,12 @@ export default defineComponent({
 				width: 100%;
 				height: 100%;
 
-				li {
+				.active {
+					color: rgb(255, 255, 255);
+					border-bottom: 5px solid #fa40a081;
+				}
+
+				a {
 					width: 50%;
 					text-align: center;
 					border-bottom: 5px solid #fa40a023;
@@ -54,9 +65,10 @@ export default defineComponent({
 					justify-content: center;
 					align-items: flex-end;
 					padding-bottom: 10px;
-					color: rgba(255, 255, 255, 0.75);
 					font-size: 0.8em;
 					font-weight: 600;
+					color: rgba(255, 255, 255, 0.425);
+					text-decoration: none;
 				}
 			}
         }

@@ -1,4 +1,5 @@
 <template>
+	<!-- <router-view></router-view> -->
 	<div id="home-screen">
 		<div class="contestants">
 			<TraineeTile v-for="trainee in trainees" :key="trainee.id" :trainee="trainee"/>
@@ -13,6 +14,7 @@ import SelectedHolder from '@/components/SelectedHolder.vue'
 import { defineComponent } from 'vue';
 import { Trainee } from '@/interfaces/Trainee';
 import { getTrainees } from '@/trainees.api';
+import { RouterView } from 'vue-router';
 
 export default defineComponent({
 	name: 'HomeView',
@@ -35,9 +37,9 @@ export default defineComponent({
 		},
 	},
 	components: {
-		TraineeTile: TraineeTile,
-		SelectedHolder: SelectedHolder,
-	},
+    TraineeTile: TraineeTile,
+    SelectedHolder: SelectedHolder,
+},
 });
 </script>
 
