@@ -126,8 +126,8 @@ export default defineComponent({
         img {
             max-width: 100%;
             max-height: 100%;
-            transition: all 350ms;
-            animation: grow-image 100ms cubic-bezier(0, 1.25, 1, 1);
+            transition: all 400ms;
+            animation: grow-image 100ms cubic-bezier(0, 1.1, 1, 1);
         }
     }
 

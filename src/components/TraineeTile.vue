@@ -17,6 +17,11 @@ import { Trainee } from '@/interfaces/Trainee';
 
 export default defineComponent({
     name: 'TraineeTile',
+    data () {
+        return {
+            isSelected: false
+        }
+    },
     mounted() {
         console.log('Component mounted');
         const traineeStore = useSelectedTraineesStore();
@@ -25,11 +30,6 @@ export default defineComponent({
 
         if (isSelected) {
             this.isSelected = true ;
-        }
-    },
-    data () {
-        return {
-            isSelected: false
         }
     },
     methods: {

@@ -96,7 +96,7 @@ export default defineComponent({
         margin-top: 25px;
         margin-bottom: 20px;
         font-size: 2.5em;
-        color: rgba(214, 135, 194, 0.452);
+        color: rgba(214, 135, 194, 0.76);
         // text-shadow: #fa40a08c 0px 0 35px;
         line-height: 1.25em;
     }
