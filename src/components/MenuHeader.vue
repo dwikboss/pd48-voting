@@ -33,7 +33,7 @@ export default defineComponent({
 		// border-bottom-left-radius: 20px;
 		// border-bottom-right-radius: 20px;
 		// padding: 20px 20px 0 20px;
-		height: 8vh;
+		height: 10vh;
 
         .header-menu {
             display: flex;

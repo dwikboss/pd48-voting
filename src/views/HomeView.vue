@@ -14,7 +14,6 @@ import SelectedHolder from '@/components/SelectedHolder.vue'
 import { defineComponent } from 'vue';
 import { Trainee } from '@/interfaces/Trainee';
 import { getTrainees } from '@/trainees.api';
-import { RouterView } from 'vue-router';
 
 export default defineComponent({
 	name: 'HomeView',

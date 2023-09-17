@@ -66,13 +66,11 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .certificate {
-    background:
-    repeating-conic-gradient(from 30deg,#0000 0 120deg,rgba(238, 91, 201, 0.11) 0 180deg) 
-    60px 34.62px,
-    repeating-conic-gradient(from 30deg,rgba(255, 66, 164, 0.2) 0 60deg,rgba(255,168,213,0.2) 0 120deg,rgba(238, 92, 206, 0.2) 0 0deg);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    // border-radius: 15px;
+    background: repeating-conic-gradient(from 30deg,#ffffff00 0 120deg,rgb(255 229 249) 0 180deg) 60px 34.62px,
+    repeating-conic-gradient(from 30deg,rgb(255 202 230) 0 60deg,rgb(253 247 255) 0 120deg,rgb(255 0 199 / 20%) 0 0deg);
+    // border-top-left-radius: 10px;
+    // border-top-right-radius: 10px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -13,7 +13,6 @@ export default defineComponent({
 		MenuHeader: MenuHeader
 	}
 })
-
 </script>
 
 <style lang="scss">

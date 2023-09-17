@@ -3,7 +3,8 @@ import { Trainee } from '@/interfaces/Trainee';
 
 export const useSelectedTraineesStore = defineStore('trainees', {
     state: () => ({
-        selectedTrainees: [] as Trainee[]
+        selectedTrainees: [] as Trainee[],
+        votedTrainees: [] as Trainee[]
     }),
 
     actions: {
